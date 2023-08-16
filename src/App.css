@@ -1,0 +1,86 @@
+:root {
+  --main-color: rgb(195, 132, 14);
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+/* ------------------------------------- */
+/* --------------- HEADER -------------- */
+/* ------------------------------------- */
+header {
+  border-bottom: 1px solid lightgray;
+}
+header > div {
+  display: flex;
+  gap: 20px;
+  padding: 15px 0;
+}
+header i {
+  font-size: 30px;
+  color: var(--main-color);
+}
+
+/* ------------------------------------- */
+/* ---------------- MAIN --------------- */
+/* ------------------------------------- */
+main {
+  margin: 150px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 120px;
+}
+.color {
+  background-color: var(--main-color);
+}
+
+.button {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+  justify-content: center;
+}
+.button button {
+  border: 1px solid var(--main-color);
+  padding: 5px 10px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+main > div:last-child > p {
+  padding: 10px 15px;
+  border-radius: 4px;
+  color: white;
+  font-size: 20px;
+}
+.go {
+  background-color: rgb(32, 174, 92);
+}
+.no {
+  background-color: rgb(191, 12, 12);
+}
+
+/* ------------------------------------- */
+/* --------------- FOOTER -------------- */
+/* ------------------------------------- */
+
+footer {
+  text-align: center;
+  padding: 50px 0;
+}
+
+footer a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
