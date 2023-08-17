@@ -23,14 +23,25 @@ const App = () => {
           <Button switching={switch3} setSwitch={setSwitch3} />
         </div>
 
-        <div>
+        <section>
           {switch1 && switch2 && switch3 === true ? (
             <p className="go">Lets'Go</p>
           ) : (
             <p className="no">No way</p>
           )}
-        </div>
+        </section>
+
+        <button
+          onClick={() => {
+            setSwitch1(false);
+            setSwitch2(false);
+            setSwitch3(false);
+          }}
+        >
+          ⚠ Emergency
+        </button>
       </main>
+
       <footer>
         Made at <a href="https://www.lereacteur.io">Le Reacteur</a> by
         <a href="https://github.com/Gregoire-Paulay"> Grégoire Paulay</a> - 2023

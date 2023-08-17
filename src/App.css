@@ -34,14 +34,20 @@ header i {
 /* ---------------- MAIN --------------- */
 /* ------------------------------------- */
 main {
-  margin: 150px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 120px;
+  height: 75vh;
 }
-.color {
+
+.active {
   background-color: var(--main-color);
+  color: white;
+}
+.inactive {
+  background-color: whitesmoke;
+  color: var(--main-color);
 }
 
 .button {
@@ -57,7 +63,7 @@ main {
   cursor: pointer;
 }
 
-main > div:last-child > p {
+main > section > p {
   padding: 10px 15px;
   border-radius: 4px;
   color: white;
@@ -70,6 +76,14 @@ main > div:last-child > p {
   background-color: rgb(191, 12, 12);
 }
 
+main > button {
+  padding: 8px 15px;
+  font-size: 22px;
+  background-color: red;
+  border: 4px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+}
 /* ------------------------------------- */
 /* --------------- FOOTER -------------- */
 /* ------------------------------------- */
