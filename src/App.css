@@ -100,3 +100,14 @@ footer a {
   color: black;
   font-weight: bold;
 }
+
+/* ------------------------------------- */
+/* --------------- QUERY --------------- */
+/* ------------------------------------- */
+@media (max-width: 660px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+  }
+}
