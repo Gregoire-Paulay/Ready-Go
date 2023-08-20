@@ -1,6 +1,10 @@
 import { useState } from "react";
 import "./App.css";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Button from "./components/Button";
+import Emergency from "./components/Emergency";
+import Message from "./components/Message";
 
 const App = () => {
   const [switch1, setSwitch1] = useState(false);
@@ -9,12 +13,7 @@ const App = () => {
 
   return (
     <div className="container">
-      <header>
-        <div>
-          <i className="fa-solid fa-rocket"></i>
-          <h1>Ready To Go</h1>
-        </div>
-      </header>
+      <Header />
 
       <main>
         <div>
@@ -23,29 +22,16 @@ const App = () => {
           <Button switching={switch3} setSwitch={setSwitch3} />
         </div>
 
-        <section>
-          {switch1 && switch2 && switch3 === true ? (
-            <p className="go">Lets'Go</p>
-          ) : (
-            <p className="no">No way</p>
-          )}
-        </section>
+        <Message switch1={switch1} switch2={switch2} switch3={switch3} />
 
-        <button
-          onClick={() => {
-            setSwitch1(false);
-            setSwitch2(false);
-            setSwitch3(false);
-          }}
-        >
-          ⚠ Emergency
-        </button>
+        <Emergency
+          setSwitch1={setSwitch1}
+          setSwitch2={setSwitch2}
+          setSwitch3={setSwitch3}
+        />
       </main>
 
-      <footer>
-        Made at <a href="https://www.lereacteur.io">Le Reacteur</a> by
-        <a href="https://github.com/Gregoire-Paulay"> Grégoire Paulay</a> - 2023
-      </footer>
+      <Footer />
     </div>
   );
 };
